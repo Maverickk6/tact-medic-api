@@ -4,8 +4,8 @@ export class CreatePatientDto {
     @ApiProperty()
     name: string;
 
-    @ApiProperty()
-    image: string;
+    @ApiProperty({ required: false })
+    image?: string;
 
     @ApiProperty()
     gender: string;
@@ -19,14 +19,14 @@ export class CreatePatientDto {
         email: string;
     };
 
-    @ApiProperty()
-    lastAppointment: string;
+    @ApiProperty({ required: false })
+    lastAppointment?: string;
 
-    @ApiProperty()
-    upcomingAppointment: string;
+    @ApiProperty({ required: false })
+    upcomingAppointment?: string;
 
-    @ApiProperty()
-    consultationNotes: {
+    @ApiProperty({ required: false })
+    consultationNotes?: {
         title: string;
         description: string;
         date: string;
